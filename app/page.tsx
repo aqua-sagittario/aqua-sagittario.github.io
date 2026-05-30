@@ -524,20 +524,19 @@ export default function Home() {
                 key={scene.title}
                 className={`scroll-reveal group overflow-hidden rounded-[1.6rem] border border-sagittarius-water/40 bg-white shadow-soft ${scene.className}`}
               >
-                <div className={`relative ${scene.aspect} min-h-[18rem] w-full lg:h-full`}>
+                <div className={`relative ${scene.aspect} min-h-[18rem] w-full`}>
                   <Image
                     alt={scene.alt}
-                    className="object-cover brightness-[0.8] contrast-[1.1] saturate-[1.05] transition duration-700 group-hover:scale-[1.03] group-hover:brightness-[0.74]"
+                    className="object-cover contrast-[1.08] saturate-[1.04] transition duration-700 group-hover:scale-[1.02]"
                     fill
                     priority={false}
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     src={scene.src}
                   />
-                  <div className="absolute inset-0 bg-sagittarius-navy/14" />
-                  <div className="absolute inset-x-0 bottom-0 border-t border-white/10 bg-gradient-to-t from-[#041a2d] via-[#082a4a]/92 to-transparent p-5 text-white md:p-6">
-                    <p className="text-sm font-semibold tracking-[0.14em] text-sagittarius-water md:text-base [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]">{scene.title}</p>
-                    <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base [text-shadow:0_1px_10px_rgba(0,0,0,0.45)]">{scene.text}</p>
-                  </div>
+                </div>
+                <div className="border-t border-sagittarius-water/25 bg-white px-5 py-5 md:px-6">
+                  <p className="text-sm font-semibold tracking-[0.14em] text-sagittarius-navy md:text-base">{scene.title}</p>
+                  <p className="mt-2 text-[0.98rem] leading-7 text-sagittarius-ink/88 md:text-base">{scene.text}</p>
                 </div>
               </article>
             ))}
