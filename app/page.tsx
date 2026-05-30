@@ -66,6 +66,41 @@ const products = [
   },
 ];
 
+const slowStayScenes = [
+  {
+    title: "朝の瞑想",
+    text: "棚田と山並みを望む畑で、呼吸を整えながら一日の感覚をひらく時間。",
+    src: "/slow-stay-meditation.png",
+    alt: "棚田を望む畑で瞑想する農と祈りのスローステイ参加者たち",
+    className: "lg:col-span-2 lg:row-span-2",
+    aspect: "aspect-[16/10] lg:aspect-auto",
+  },
+  {
+    title: "花の手しごと",
+    text: "バラの香りに触れながら、季節の恵みをやさしく摘み取る体験。",
+    src: "/slow-stay-rose.png",
+    alt: "バラ畑で花を摘む農と祈りのスローステイ参加者たち",
+    className: "",
+    aspect: "aspect-[16/10]",
+  },
+  {
+    title: "土地を味わう食卓",
+    text: "自然に育った野菜と火のぬくもりを囲み、その土地の滋味を分かち合う時間。",
+    src: "/slow-stay-bbq.png",
+    alt: "自然に育った野菜と食材を囲む農と祈りのスローステイの食体験",
+    className: "",
+    aspect: "aspect-[16/10]",
+  },
+  {
+    title: "焚火と語らい",
+    text: "火を囲み、土地の人や参加者と言葉を交わしながら心をほどく夜。",
+    src: "/slow-stay-fire.png",
+    alt: "古民家の庭で焚火を囲む農と祈りのスローステイ参加者たち",
+    className: "md:col-span-2 lg:col-span-3",
+    aspect: "aspect-[16/9]",
+  },
+];
+
 export default function Home() {
   return (
     <main className="overflow-hidden bg-sagittarius-porcelain">
@@ -474,71 +509,99 @@ export default function Home() {
       </section>
 
       <section className="bg-white px-5 py-24 md:px-8 md:py-32" id="stay">
-        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="mx-auto max-w-7xl">
           <div className="scroll-reveal">
             <SectionTitle
               eyebrow="農泊 / 体験"
               title="農と祈りのスローステイへ。"
               lead="水のサジタリオが届けたいのは、野菜そのものだけではありません。射水の水、土、火、香りに深く触れながら、自分の呼吸と暮らしの速度を取り戻していく農泊体験へと、ブランドの世界観はゆるやかにつながっています。"
             />
-            <div className="mt-8 space-y-5 text-sm leading-8 text-sagittarius-ink/76 md:text-base">
-              <p>
-                「農と祈りのスローステイ」は、射水市水戸田・青井谷を舞台にした、水のサジタリオの農泊ウェルネス体験です。
-                自然栽培の食、土の器、焚火、朝のコーヒー、バラやへちまの香り、地元の人との語らいを通して、
-                日常の感覚を静かに整えていきます。
-              </p>
-              <p>
-                食べること、つくること、祈ること、泊まることを切り離さず、
-                射水という土地の時間に身をゆだねる滞在そのものを一つの体験として設計しています。
-              </p>
-            </div>
           </div>
-          <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/40 bg-[linear-gradient(180deg,rgba(8,42,74,0.96),rgba(15,65,98,0.9))] p-8 text-white shadow-soft md:p-10">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-sagittarius-water">
-              Slow Stay
-            </p>
-            <h3 className="serif-heading mt-4 text-3xl font-semibold leading-[1.45] md:text-4xl">
-              野菜の背景にある、
-              <br />
-              土地の祈りまで味わう旅。
-            </h3>
-            <div className="mt-8 grid gap-3">
-              <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
-                <p className="text-sm font-semibold text-sagittarius-water">自然栽培の食と土の器</p>
-                <p className="mt-2 text-sm leading-7 text-white/78">
-                  自然栽培米や野菜を、田んぼの記憶を宿した器で味わう象徴的な食体験。
+
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(0,1.1fr)_minmax(0,0.9fr)_auto]">
+            {slowStayScenes.map((scene) => (
+              <article
+                key={scene.title}
+                className={`scroll-reveal group overflow-hidden rounded-[1.6rem] border border-sagittarius-water/40 bg-white shadow-soft ${scene.className}`}
+              >
+                <div className={`relative ${scene.aspect} min-h-[18rem] w-full lg:h-full`}>
+                  <Image
+                    alt={scene.alt}
+                    className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                    fill
+                    priority={false}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    src={scene.src}
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-sagittarius-navy/80 via-sagittarius-navy/25 to-transparent p-5 text-white md:p-6">
+                    <p className="text-xs font-semibold tracking-[0.22em] text-sagittarius-water">{scene.title}</p>
+                    <p className="mt-2 text-sm leading-7 text-white/90">{scene.text}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/35 bg-sagittarius-mist/60 p-7 shadow-soft md:p-8">
+              <p className="text-xs font-semibold tracking-[0.24em] text-sagittarius-gold">滞在がひらくもの</p>
+              <div className="mt-6 space-y-5 text-sm leading-8 text-sagittarius-ink/78 md:text-base">
+                <p>
+                  「農と祈りのスローステイ」は、射水市水戸田・青井谷を舞台にした、水のサジタリオの農泊ウェルネス体験です。
+                  自然栽培の食、土の器、焚火、朝のコーヒー、バラやへちまの香り、地元の人との語らいを通して、
+                  日常の感覚を静かに整えていきます。
                 </p>
-              </div>
-              <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
-                <p className="text-sm font-semibold text-sagittarius-water">焚火・朝火・香りの時間</p>
-                <p className="mt-2 text-sm leading-7 text-white/78">
-                  火を囲む朝、バラやへちまに触れる手しごとが、呼吸の速度をやわらかく整えます。
-                </p>
-              </div>
-              <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
-                <p className="text-sm font-semibold text-sagittarius-water">2泊3日の農泊ウェルネス</p>
-                <p className="mt-2 text-sm leading-7 text-white/78">
-                  水・土・火・香りに還りながら、射水の時間を持ち帰るための滞在設計。
+                <p>
+                  食べること、つくること、祈ること、泊まることを切り離さず、
+                  射水という土地の時間に身をゆだねる滞在そのものを一つの体験として設計しています。
                 </p>
               </div>
             </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-semibold tracking-[0.16em] text-sagittarius-navy transition hover:-translate-y-0.5 hover:bg-sagittarius-water"
-                href="https://nou-to-inori-no-retreat.github.io/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                農と祈りのスローステイを見る
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-sagittarius-gold/80 px-7 py-4 text-sm font-semibold tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-sagittarius-gold hover:text-sagittarius-navy"
-                href="https://nou-to-inori-no-retreat.github.io/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                専用LPへ移動する
-              </a>
+            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/40 bg-[linear-gradient(180deg,rgba(8,42,74,0.96),rgba(15,65,98,0.9))] p-8 text-white shadow-soft md:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-sagittarius-water">Slow Stay</p>
+              <h3 className="serif-heading mt-4 text-3xl font-semibold leading-[1.45] md:text-4xl">
+                野菜の背景にある、
+                <br />
+                土地の祈りまで味わう旅。
+              </h3>
+              <div className="mt-8 grid gap-3">
+                <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
+                  <p className="text-sm font-semibold text-sagittarius-water">朝の瞑想と畑の風景</p>
+                  <p className="mt-2 text-sm leading-7 text-white/78">
+                    山並みと棚田を前に座り、呼吸を整えて一日の感覚を静かにひらきます。
+                  </p>
+                </div>
+                <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
+                  <p className="text-sm font-semibold text-sagittarius-water">香りに触れる花摘みの時間</p>
+                  <p className="mt-2 text-sm leading-7 text-white/78">
+                    バラや植物の香りに手を添えながら、季節を持ち帰るように摘み取る手しごと。
+                  </p>
+                </div>
+                <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
+                  <p className="text-sm font-semibold text-sagittarius-water">火を囲む食卓と語らい</p>
+                  <p className="mt-2 text-sm leading-7 text-white/78">
+                    自然に育った野菜と火のぬくもり、焚火を囲む対話が、心身の速度をやわらかく戻します。
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  className="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-semibold tracking-[0.16em] text-sagittarius-navy transition hover:-translate-y-0.5 hover:bg-sagittarius-water"
+                  href="https://nou-to-inori-no-retreat.github.io/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  農と祈りのスローステイを見る
+                </a>
+                <a
+                  className="inline-flex items-center justify-center rounded-full border border-sagittarius-gold/80 px-7 py-4 text-sm font-semibold tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-sagittarius-gold hover:text-sagittarius-navy"
+                  href="https://nou-to-inori-no-retreat.github.io/"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  専用LPへ移動する
+                </a>
+              </div>
             </div>
           </div>
         </div>
