@@ -533,9 +533,9 @@ export default function Home() {
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     src={scene.src}
                   />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-sagittarius-navy/80 via-sagittarius-navy/25 to-transparent p-5 text-white md:p-6">
-                    <p className="text-xs font-semibold tracking-[0.22em] text-sagittarius-water">{scene.title}</p>
-                    <p className="mt-2 text-sm leading-7 text-white/90">{scene.text}</p>
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-sagittarius-navy via-sagittarius-navy/72 to-transparent p-5 text-white md:p-6">
+                    <p className="text-sm font-semibold tracking-[0.18em] text-sagittarius-water md:text-[0.95rem]">{scene.title}</p>
+                    <p className="mt-2 text-[0.95rem] leading-7 text-white/96 md:text-base">{scene.text}</p>
                   </div>
                 </div>
               </article>
@@ -544,8 +544,8 @@ export default function Home() {
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
             <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/35 bg-sagittarius-mist/60 p-7 shadow-soft md:p-8">
-              <p className="text-xs font-semibold tracking-[0.24em] text-sagittarius-gold">滞在がひらくもの</p>
-              <div className="mt-6 space-y-5 text-sm leading-8 text-sagittarius-ink/78 md:text-base">
+              <p className="text-sm font-semibold tracking-[0.18em] text-sagittarius-gold">滞在がひらくもの</p>
+              <div className="mt-6 space-y-5 text-[0.95rem] leading-8 text-sagittarius-ink/88 md:text-base">
                 <p>
                   「農と祈りのスローステイ」は、射水市水戸田・青井谷を舞台にした、水のサジタリオの農泊ウェルネス体験です。
                   自然栽培の食、土の器、焚火、朝のコーヒー、バラやへちまの香り、地元の人との語らいを通して、
@@ -557,8 +557,8 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/40 bg-[linear-gradient(180deg,rgba(8,42,74,0.96),rgba(15,65,98,0.9))] p-8 text-white shadow-soft md:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-sagittarius-water">Slow Stay</p>
+            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/40 bg-[linear-gradient(180deg,rgba(8,42,74,0.98),rgba(15,65,98,0.94))] p-8 text-white shadow-soft md:p-10">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sagittarius-water">Slow Stay</p>
               <h3 className="serif-heading mt-4 text-3xl font-semibold leading-[1.45] md:text-4xl">
                 野菜の背景にある、
                 <br />
@@ -566,20 +566,20 @@ export default function Home() {
               </h3>
               <div className="mt-8 grid gap-3">
                 <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
-                  <p className="text-sm font-semibold text-sagittarius-water">朝の瞑想と畑の風景</p>
-                  <p className="mt-2 text-sm leading-7 text-white/78">
+                  <p className="text-base font-semibold text-sagittarius-water">朝の瞑想と畑の風景</p>
+                  <p className="mt-2 text-[0.95rem] leading-7 text-white/90 md:text-base">
                     山並みと棚田を前に座り、呼吸を整えて一日の感覚を静かにひらきます。
                   </p>
                 </div>
                 <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
-                  <p className="text-sm font-semibold text-sagittarius-water">香りに触れる花摘みの時間</p>
-                  <p className="mt-2 text-sm leading-7 text-white/78">
+                  <p className="text-base font-semibold text-sagittarius-water">香りに触れる花摘みの時間</p>
+                  <p className="mt-2 text-[0.95rem] leading-7 text-white/90 md:text-base">
                     バラや植物の香りに手を添えながら、季節を持ち帰るように摘み取る手しごと。
                   </p>
                 </div>
                 <div className="rounded-[1.2rem] border border-white/12 bg-white/8 px-5 py-4">
-                  <p className="text-sm font-semibold text-sagittarius-water">火を囲む食卓と語らい</p>
-                  <p className="mt-2 text-sm leading-7 text-white/78">
+                  <p className="text-base font-semibold text-sagittarius-water">火を囲む食卓と語らい</p>
+                  <p className="mt-2 text-[0.95rem] leading-7 text-white/90 md:text-base">
                     自然に育った野菜と火のぬくもり、焚火を囲む対話が、心身の速度をやわらかく戻します。
                   </p>
                 </div>
