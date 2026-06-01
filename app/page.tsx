@@ -587,7 +587,7 @@ export default function Home() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   className="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-semibold tracking-[0.16em] text-sagittarius-navy transition hover:-translate-y-0.5 hover:bg-sagittarius-water"
-                  href="https://nou-to-inori-no-retreat.github.io/"
+                  href="https://nou-to-inori-no-slow-stay.github.io/"
                   rel="noreferrer"
                   target="_blank"
                 >
@@ -595,7 +595,7 @@ export default function Home() {
                 </a>
                 <a
                   className="inline-flex items-center justify-center rounded-full border border-sagittarius-gold/80 px-7 py-4 text-sm font-semibold tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-sagittarius-gold hover:text-sagittarius-navy"
-                  href="https://nou-to-inori-no-retreat.github.io/"
+                  href="https://nou-to-inori-no-slow-stay.github.io/"
                   rel="noreferrer"
                   target="_blank"
                 >
