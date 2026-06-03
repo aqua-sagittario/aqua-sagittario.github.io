@@ -69,7 +69,7 @@ const products = [
 const slowStayScenes = [
   {
     title: "朝の瞑想",
-    text: "棚田と山並みを望む畑で、呼吸を整えながら一日の感覚をひらく時間。",
+    text: "棚田と山並みを望む畑で、呼吸を整えながら一日の感覚をひらく、アグリマインドフルネスの時間。",
     src: "/slow-stay-meditation.png",
     alt: "棚田を望む畑で瞑想する農と祈りのスローステイ参加者たち",
     className: "lg:col-span-2 lg:row-span-2",
@@ -568,7 +568,7 @@ export default function Home() {
                 <div className="rounded-[1.2rem] border border-white/14 bg-white/10 px-5 py-4">
                   <p className="text-base font-semibold text-sagittarius-water">朝の瞑想と畑の風景</p>
                   <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base">
-                    山並みと棚田を前に座り、呼吸を整えて一日の感覚を静かにひらきます。
+                    山並みと棚田を前に座り、畑の気配に意識を澄ませるアグリマインドフルネスとして、呼吸と一日の感覚を静かにひらきます。
                   </p>
                 </div>
                 <div className="rounded-[1.2rem] border border-white/14 bg-white/10 px-5 py-4">
