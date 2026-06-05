@@ -458,7 +458,7 @@ export default function Home() {
                 className="object-cover"
                 fill
                 sizes="(min-width: 1024px) 720px, 100vw"
-                src="/marche-booth.png"
+                src="/marche-booth-basket.png"
               />
             </div>
           </div>
