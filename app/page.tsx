@@ -101,6 +101,45 @@ const slowStayScenes = [
   },
 ];
 
+const slowStayMetrics = [
+  { label: "滞在のかたち", value: "2泊3日" },
+  { label: "舞台", value: "射水市水戸田・青井谷" },
+  { label: "感覚", value: "水・土・火・香り" },
+];
+
+const slowStayEssence = [
+  {
+    title: "畑の気配に身をゆだねる",
+    text: "朝の瞑想や散策を通して、風や光の変化に意識を澄ませ、自分の速度をゆっくり取り戻します。",
+  },
+  {
+    title: "土地の恵みを、手で受け取る",
+    text: "花摘み、火を囲む食卓、自然栽培の滋味。眺めるだけではなく、手を動かしながら土地とつながる滞在です。",
+  },
+  {
+    title: "祈りの余韻を、日常へ持ち帰る",
+    text: "食べること、つくること、泊まることを切り離さず、暮らしの整え方そのものを持ち帰るための設計です。",
+  },
+];
+
+const slowStayFlow = [
+  {
+    step: "01",
+    title: "迎え入れる",
+    text: "射水の水と空気に触れ、滞在の入口で身体と呼吸をゆるめる。",
+  },
+  {
+    step: "02",
+    title: "触れて味わう",
+    text: "香りを摘み、土にふれ、火を囲みながら、土地の恵みを五感で受け取る。",
+  },
+  {
+    step: "03",
+    title: "持ち帰る",
+    text: "整った感覚と静かな余白を、ふだんの暮らしへそのまま連れて帰る。",
+  },
+];
+
 export default function Home() {
   return (
     <main className="overflow-hidden bg-sagittarius-porcelain">
@@ -515,101 +554,127 @@ export default function Home() {
       </section>
 
       <section
-        className="bg-[linear-gradient(180deg,#f4f8fb_0%,#eef5f8_38%,#f9fbfc_100%)] px-5 py-24 md:px-8 md:py-32"
+        className="bg-[linear-gradient(180deg,#edf5f8_0%,#e7f0f4_32%,#f8fbfc_100%)] px-5 py-24 md:px-8 md:py-32"
         id="stay"
       >
         <div className="mx-auto max-w-7xl">
-          <div className="scroll-reveal">
-            <SectionTitle
-              eyebrow="農泊 / 体験"
-              title="農と祈りのスローステイへ。"
-              lead="水のサジタリオが届けたいのは、野菜そのものだけではありません。射水の水、土、火、香りに深く触れながら、自分の呼吸と暮らしの速度を取り戻していく農泊体験へと、ブランドの世界観はゆるやかにつながっています。"
-            />
-          </div>
-
-          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(0,1.1fr)_minmax(0,0.9fr)_auto]">
-            {slowStayScenes.map((scene) => (
-              <article
-                key={scene.title}
-                className={`scroll-reveal group overflow-hidden rounded-[1.6rem] border border-sagittarius-water/45 bg-white shadow-[0_24px_70px_rgba(8,42,74,0.12)] ${scene.className}`}
-              >
-                <div className={`relative ${scene.aspect} min-h-[18rem] w-full`}>
-                  <Image
-                    alt={scene.alt}
-                    className="object-cover brightness-[0.96] contrast-[1.16] saturate-[1.08] transition duration-700 group-hover:scale-[1.02]"
-                    fill
-                    priority={false}
-                    sizes="(min-width: 1024px) 50vw, 100vw"
-                    src={scene.src}
-                  />
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div className="scroll-reveal">
+              <SectionTitle
+                eyebrow="農泊 / 体験"
+                title="農と祈りのスローステイへ。"
+                lead="水のサジタリオが届けたいのは、野菜そのものだけではありません。射水の水、土、火、香りに深く触れながら、自分の呼吸と暮らしの速度を取り戻していく農泊体験へと、ブランドの世界観はゆるやかにつながっています。"
+              />
+              <div className="mt-8 grid gap-3 sm:grid-cols-3">
+                {slowStayMetrics.map((metric) => (
+                  <div
+                    key={metric.label}
+                    className="rounded-[1.25rem] border border-sagittarius-water/35 bg-white/85 px-5 py-4 shadow-[0_16px_40px_rgba(8,42,74,0.08)]"
+                  >
+                    <p className="text-xs font-semibold tracking-[0.16em] text-sagittarius-gold">{metric.label}</p>
+                    <p className="serif-heading mt-2 text-xl font-semibold text-sagittarius-navy">{metric.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="scroll-reveal overflow-hidden rounded-[1.8rem] border border-white/70 bg-white/70 shadow-[0_30px_90px_rgba(8,42,74,0.12)]">
+              <div className="relative aspect-[16/10] w-full">
+                <Image
+                  alt={slowStayScenes[3].alt}
+                  className="object-cover brightness-[0.97] contrast-[1.12] saturate-[1.05]"
+                  fill
+                  priority={false}
+                  sizes="(min-width: 1024px) 720px, 100vw"
+                  src={slowStayScenes[3].src}
+                />
+              </div>
+              <div className="grid gap-4 border-t border-sagittarius-water/25 bg-white/92 px-6 py-6 md:grid-cols-[0.9fr_1.1fr] md:px-8">
+                <div>
+                  <p className="text-xs font-semibold tracking-[0.2em] text-sagittarius-water">SLOW STAY</p>
+                  <h3 className="serif-heading mt-3 text-2xl font-semibold leading-[1.45] text-sagittarius-navy md:text-3xl">
+                    野菜の背景にある、
+                    <br />
+                    土地の祈りまで味わう旅。
+                  </h3>
                 </div>
-                <div className="border-t border-sagittarius-water/30 bg-[#fcfeff] px-5 py-5 md:px-6">
-                  <p className="text-sm font-semibold tracking-[0.14em] text-sagittarius-navy md:text-base">{scene.title}</p>
-                  <p className="mt-2 text-[0.98rem] leading-7 text-sagittarius-ink md:text-base">{scene.text}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          <div className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/45 bg-white/98 p-7 shadow-[0_24px_70px_rgba(8,42,74,0.1)] md:p-8">
-              <p className="text-sm font-semibold tracking-[0.16em] text-sagittarius-gold">滞在がひらくもの</p>
-              <div className="mt-6 space-y-5 text-[0.98rem] leading-8 text-sagittarius-ink md:text-base">
-                <p>
-                  「農と祈りのスローステイ」は、射水市水戸田・青井谷を舞台にした、水のサジタリオの農泊ウェルネス体験です。
-                  自然栽培の食、土の器、焚火、朝のコーヒー、バラやへちまの香り、地元の人との語らいを通して、
-                  日常の感覚を静かに整えていきます。
-                </p>
-                <p>
-                  食べること、つくること、祈ること、泊まることを切り離さず、
-                  射水という土地の時間に身をゆだねる滞在そのものを一つの体験として設計しています。
+                <p className="text-sm leading-8 text-sagittarius-ink/82 md:text-base">
+                  火を囲む語らい、自然栽培の食、朝の瞑想、花の香り。土地にある営みを静かに編み直しながら、滞在そのものを整えの体験へ変えていきます。
                 </p>
               </div>
             </div>
-            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/45 bg-[linear-gradient(180deg,#314457_0%,#556779_100%)] p-8 text-white shadow-[0_24px_70px_rgba(8,42,74,0.16)] md:p-10">
-              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sagittarius-water">Slow Stay</p>
-              <h3 className="serif-heading mt-4 text-3xl font-semibold leading-[1.4] text-white md:text-4xl">
-                野菜の背景にある、
-                <br />
-                土地の祈りまで味わう旅。
-              </h3>
-              <div className="mt-8 grid gap-3">
-                <div className="rounded-[1.2rem] border border-white/20 bg-white/8 px-5 py-4">
-                  <p className="text-base font-semibold text-sagittarius-water">朝の瞑想と畑の風景</p>
-                  <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base">
-                    山並みと棚田を前に座り、畑の気配に意識を澄ませるアグリマインドフルネスとして、呼吸と一日の感覚を静かにひらきます。
-                  </p>
-                </div>
-                <div className="rounded-[1.2rem] border border-white/20 bg-white/8 px-5 py-4">
-                  <p className="text-base font-semibold text-sagittarius-water">香りに触れる花摘みの時間</p>
-                  <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base">
-                    バラや植物の香りに手を添えながら、季節を持ち帰るように摘み取る手しごと。
-                  </p>
-                </div>
-                <div className="rounded-[1.2rem] border border-white/20 bg-white/8 px-5 py-4">
-                  <p className="text-base font-semibold text-sagittarius-water">火を囲む食卓と語らい</p>
-                  <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base">
-                    自然に育った野菜と火のぬくもり、焚火を囲む対話が、心身の速度をやわらかく戻します。
-                  </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-[1.12fr_0.88fr]">
+            <div className="grid gap-5 md:grid-cols-2">
+              {slowStayScenes.map((scene, index) => (
+                <article
+                  key={scene.title}
+                  className={`scroll-reveal overflow-hidden rounded-[1.6rem] border border-sagittarius-water/35 bg-white shadow-[0_22px_60px_rgba(8,42,74,0.1)] ${
+                    index === 0 ? "md:col-span-2" : ""
+                  }`}
+                >
+                  <div className={`relative ${index === 0 ? "aspect-[16/8.8]" : "aspect-[16/10]"} w-full`}>
+                    <Image
+                      alt={scene.alt}
+                      className="object-cover brightness-[0.98] contrast-[1.12] saturate-[1.06]"
+                      fill
+                      priority={false}
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      src={scene.src}
+                    />
+                  </div>
+                  <div className="border-t border-sagittarius-water/25 bg-[#fcfeff] px-5 py-5 md:px-6">
+                    <p className="text-sm font-semibold tracking-[0.14em] text-sagittarius-navy md:text-base">{scene.title}</p>
+                    <p className="mt-2 text-[0.98rem] leading-7 text-sagittarius-ink/92 md:text-base">{scene.text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="scroll-reveal space-y-6">
+              <div className="rounded-[1.7rem] border border-sagittarius-water/35 bg-white/94 p-7 shadow-[0_24px_70px_rgba(8,42,74,0.1)] md:p-8">
+                <p className="text-sm font-semibold tracking-[0.16em] text-sagittarius-gold">滞在がひらくもの</p>
+                <div className="mt-6 space-y-5">
+                  {slowStayEssence.map((item) => (
+                    <div key={item.title} className="border-b border-sagittarius-water/18 pb-5 last:border-b-0 last:pb-0">
+                      <h4 className="text-lg font-semibold text-sagittarius-navy">{item.title}</h4>
+                      <p className="mt-2 text-[0.98rem] leading-8 text-sagittarius-ink/86 md:text-base">{item.text}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  className="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-semibold tracking-[0.16em] text-sagittarius-navy transition hover:-translate-y-0.5 hover:bg-sagittarius-water"
-                  href="https://nou-to-inori-no-slow-stay.github.io/"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  農と祈りのスローステイを見る
-                </a>
-                <a
-                  className="inline-flex items-center justify-center rounded-full border border-sagittarius-gold/80 px-7 py-4 text-sm font-semibold tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-sagittarius-gold hover:text-sagittarius-navy"
-                  href="https://nou-to-inori-no-slow-stay.github.io/"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  専用LPへ移動する
-                </a>
+
+              <div className="rounded-[1.7rem] border border-sagittarius-water/45 bg-[linear-gradient(180deg,#294153_0%,#3f5c6e_100%)] p-7 text-white shadow-[0_24px_70px_rgba(8,42,74,0.16)] md:p-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sagittarius-water">Stay Flow</p>
+                <div className="mt-6 space-y-4">
+                  {slowStayFlow.map((item) => (
+                    <div key={item.step} className="rounded-[1.2rem] border border-white/18 bg-white/8 px-5 py-4">
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs font-semibold tracking-[0.2em] text-sagittarius-water">{item.step}</span>
+                        <h4 className="text-base font-semibold text-white">{item.title}</h4>
+                      </div>
+                      <p className="mt-2 text-[0.98rem] leading-7 text-white/92 md:text-base">{item.text}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    className="inline-flex items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-semibold tracking-[0.16em] text-sagittarius-navy transition hover:-translate-y-0.5 hover:bg-sagittarius-water"
+                    href="https://nou-to-inori-no-slow-stay.github.io/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    農と祈りのスローステイを見る
+                  </a>
+                  <a
+                    className="inline-flex items-center justify-center rounded-full border border-sagittarius-gold/80 px-7 py-4 text-sm font-semibold tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-sagittarius-gold hover:text-sagittarius-navy"
+                    href="https://nou-to-inori-no-slow-stay.github.io/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    専用LPへ移動する
+                  </a>
+                </div>
               </div>
             </div>
           </div>
