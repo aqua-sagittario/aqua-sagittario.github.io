@@ -514,7 +514,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white px-5 py-24 md:px-8 md:py-32" id="stay">
+      <section
+        className="bg-[linear-gradient(180deg,#f4f8fb_0%,#eef5f8_38%,#f9fbfc_100%)] px-5 py-24 md:px-8 md:py-32"
+        id="stay"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="scroll-reveal">
             <SectionTitle
@@ -528,28 +531,28 @@ export default function Home() {
             {slowStayScenes.map((scene) => (
               <article
                 key={scene.title}
-                className={`scroll-reveal group overflow-hidden rounded-[1.6rem] border border-sagittarius-water/40 bg-white shadow-soft ${scene.className}`}
+                className={`scroll-reveal group overflow-hidden rounded-[1.6rem] border border-sagittarius-water/45 bg-white shadow-[0_24px_70px_rgba(8,42,74,0.12)] ${scene.className}`}
               >
                 <div className={`relative ${scene.aspect} min-h-[18rem] w-full`}>
                   <Image
                     alt={scene.alt}
-                    className="object-cover contrast-[1.08] saturate-[1.04] transition duration-700 group-hover:scale-[1.02]"
+                    className="object-cover brightness-[0.96] contrast-[1.16] saturate-[1.08] transition duration-700 group-hover:scale-[1.02]"
                     fill
                     priority={false}
                     sizes="(min-width: 1024px) 50vw, 100vw"
                     src={scene.src}
                   />
                 </div>
-                <div className="border-t border-sagittarius-water/25 bg-white px-5 py-5 md:px-6">
+                <div className="border-t border-sagittarius-water/30 bg-[#fcfeff] px-5 py-5 md:px-6">
                   <p className="text-sm font-semibold tracking-[0.14em] text-sagittarius-navy md:text-base">{scene.title}</p>
-                  <p className="mt-2 text-[0.98rem] leading-7 text-sagittarius-ink/88 md:text-base">{scene.text}</p>
+                  <p className="mt-2 text-[0.98rem] leading-7 text-sagittarius-ink md:text-base">{scene.text}</p>
                 </div>
               </article>
             ))}
           </div>
 
           <div className="mt-10 grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/40 bg-white p-7 shadow-soft md:p-8">
+            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/45 bg-white/98 p-7 shadow-[0_24px_70px_rgba(8,42,74,0.1)] md:p-8">
               <p className="text-sm font-semibold tracking-[0.16em] text-sagittarius-gold">滞在がひらくもの</p>
               <div className="mt-6 space-y-5 text-[0.98rem] leading-8 text-sagittarius-ink md:text-base">
                 <p>
@@ -563,7 +566,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/45 bg-[linear-gradient(180deg,rgba(4,26,45,0.99),rgba(8,42,74,0.98))] p-8 text-white shadow-soft md:p-10">
+            <div className="scroll-reveal rounded-[1.6rem] border border-sagittarius-water/45 bg-[linear-gradient(180deg,#314457_0%,#556779_100%)] p-8 text-white shadow-[0_24px_70px_rgba(8,42,74,0.16)] md:p-10">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sagittarius-water">Slow Stay</p>
               <h3 className="serif-heading mt-4 text-3xl font-semibold leading-[1.4] text-white md:text-4xl">
                 野菜の背景にある、
@@ -571,19 +574,19 @@ export default function Home() {
                 土地の祈りまで味わう旅。
               </h3>
               <div className="mt-8 grid gap-3">
-                <div className="rounded-[1.2rem] border border-white/14 bg-white/10 px-5 py-4">
+                <div className="rounded-[1.2rem] border border-white/20 bg-white/8 px-5 py-4">
                   <p className="text-base font-semibold text-sagittarius-water">朝の瞑想と畑の風景</p>
                   <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base">
                     山並みと棚田を前に座り、畑の気配に意識を澄ませるアグリマインドフルネスとして、呼吸と一日の感覚を静かにひらきます。
                   </p>
                 </div>
-                <div className="rounded-[1.2rem] border border-white/14 bg-white/10 px-5 py-4">
+                <div className="rounded-[1.2rem] border border-white/20 bg-white/8 px-5 py-4">
                   <p className="text-base font-semibold text-sagittarius-water">香りに触れる花摘みの時間</p>
                   <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base">
                     バラや植物の香りに手を添えながら、季節を持ち帰るように摘み取る手しごと。
                   </p>
                 </div>
-                <div className="rounded-[1.2rem] border border-white/14 bg-white/10 px-5 py-4">
+                <div className="rounded-[1.2rem] border border-white/20 bg-white/8 px-5 py-4">
                   <p className="text-base font-semibold text-sagittarius-water">火を囲む食卓と語らい</p>
                   <p className="mt-2 text-[0.98rem] leading-7 text-white md:text-base">
                     自然に育った野菜と火のぬくもり、焚火を囲む対話が、心身の速度をやわらかく戻します。
