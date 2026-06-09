@@ -580,12 +580,12 @@ export default function Home() {
             <div className="scroll-reveal overflow-hidden rounded-[1.8rem] border border-white/70 bg-white/70 shadow-[0_30px_90px_rgba(8,42,74,0.12)]">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  alt={slowStayScenes[0].alt}
+                  alt="棚田を望む畑で瞑想する農と祈りのスローステイ参加者たち"
                   className="object-cover brightness-[0.97] contrast-[1.12] saturate-[1.05]"
                   fill
                   priority={false}
                   sizes="(min-width: 1024px) 720px, 100vw"
-                  src={slowStayScenes[0].src}
+                  src="/slow-stay-hero-meditation.png"
                 />
               </div>
               <div className="grid gap-4 border-t border-sagittarius-water/25 bg-white/92 px-6 py-6 md:grid-cols-[0.9fr_1.1fr] md:px-8">
