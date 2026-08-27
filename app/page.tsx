@@ -305,8 +305,8 @@ export default function Home() {
           <div className="scroll-reveal">
             <SectionTitle
               eyebrow="物語"
-              title="「射水」を翻訳する、イタリアの響き。"
-              lead="サジタリオは、イタリア語で射手座を意味します。矢を放つ星座の名に、射水の清らかな水を重ね、野菜という一矢に乗せて食卓へ射抜く。そこに、イタリアのスローフード哲学と、射水ならではのスローベジタブルの思想を重ねました。"
+              title="水を呼ぶ一矢を、イタリアの響きへ。"
+              lead="古代の射水郡が現在の高岡市の大部分まで広がっていた歴史と、常国に残る「弓の清水」の伝承。その土地の記憶を、水と矢のブランド「水のサジタリオ」へ受け継ぎました。"
             />
             <div className="mt-8 space-y-6 text-sm leading-8 text-sagittarius-ink/76 md:text-base">
               <p>
@@ -314,7 +314,11 @@ export default function Home() {
                 効率やスピードでは測れない食の豊かさを取り戻す思想です。
               </p>
               <p>
-                日本のベニスと呼ばれる内川の水辺文化、立山の雪解け水、そして射水の農の記憶。
+                サジタリオは、イタリア語で射手座を意味します。矢を放つ星座の名に、
+                水を呼んだ一矢の伝承と射水の清らかな水を重ねました。
+              </p>
+              <p>
+                日本のベニスと呼ばれる内川の水辺文化、立山の雪解け水、弓の清水、そして射水の農の記憶。
                 その土地ならではの時間の流れを受け取り、日々の食卓へ訳し直すこと。
                 それが「射水のスローベジタブル」という私たちの答えです。
               </p>
@@ -363,15 +367,16 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
             <div className="scroll-reveal">
-              <p className="text-xs font-semibold tracking-[0.24em] text-sagittarius-gold">水と矢の伝承</p>
+              <p className="text-xs font-semibold tracking-[0.24em] text-sagittarius-gold">ブランドの源流</p>
               <h2 className="serif-heading mt-5 text-4xl font-semibold leading-[1.4] text-sagittarius-navy md:text-6xl">
                 一矢が大地を射抜き、
                 <br />
                 清水が湧いた。
               </h2>
               <p className="mt-7 max-w-2xl text-base leading-9 text-sagittarius-ink/82 md:text-lg">
-                射水のほど近く、高岡市中田常国に湧く「弓の清水（ゆみのしょうず）」。
-                そこには、渇いた人々を一本の矢と清らかな水が救った、800年以上前の物語が伝わっています。
+                現在の高岡市中田常国に湧く「弓の清水（ゆみのしょうず）」。
+                古代の射水郡は、現在の射水市域だけでなく、高岡市の大部分までを含む広い地域でした。
+                その歴史圏に伝わる、水と一矢の物語を、水のサジタリオはブランドの源流として受け継ぎます。
               </p>
               <div className="mt-9 space-y-5 text-sm leading-8 text-sagittarius-ink/76 md:text-base">
                 <p>
@@ -435,9 +440,9 @@ export default function Home() {
             </p>
             <div>
               <p className="text-base leading-9 text-sagittarius-ink/82 md:text-lg">
-                「弓の清水」の伝承と、水のサジタリオは直接の由来で結ばれているわけではありません。
-                けれど、祈りを込めた一矢が清水を呼び、その水が人の力を整える物語は、私たちの思想と深く響き合います。
-                射水の水と土が育てた野菜を、家族の明日へ届ける一矢として。
+                水のサジタリオの名と思想は、この土地に残る「弓の清水」の物語へ直接つながっています。
+                祈りを込めた一矢が清水を呼び、その水が人の力を整えたように、
+                私たちは射水の水と土が育てた野菜を、家族の心身と明日を整える一矢として食卓へ届けます。
               </p>
               <div className="mt-5 flex flex-wrap gap-5 text-sm font-semibold text-sagittarius-navy">
                 <a
@@ -455,6 +460,14 @@ export default function Home() {
                   target="_blank"
                 >
                   高岡観光ナビで物語の舞台を見る
+                </a>
+                <a
+                  className="border-b border-sagittarius-gold pb-1 transition hover:text-sagittarius-gold"
+                  href="https://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=8"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  射水市「射水」の地名について
                 </a>
               </div>
             </div>
