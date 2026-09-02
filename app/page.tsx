@@ -305,8 +305,8 @@ export default function Home() {
           <div className="scroll-reveal">
             <SectionTitle
               eyebrow="物語"
-              title="水を呼ぶ一矢を、イタリアの響きへ。"
-              lead="古代の射水郡が現在の高岡市の大部分まで広がっていた歴史と、常国に残る「弓の清水」の伝承。その土地の記憶を、水と矢のブランド「水のサジタリオ」へ受け継ぎました。"
+              title="「射水」を翻訳する、イタリアの響き。"
+              lead="サジタリオは、イタリア語で射手座を意味します。矢を放つ星座の名に、射水の清らかな水を重ね、野菜という一矢に乗せて食卓へ届ける。そこに、イタリアのスローフード哲学と、射水ならではのスローベジタブルの思想を重ねました。"
             />
             <div className="mt-8 space-y-6 text-sm leading-8 text-sagittarius-ink/76 md:text-base">
               <p>
@@ -314,11 +314,7 @@ export default function Home() {
                 効率やスピードでは測れない食の豊かさを取り戻す思想です。
               </p>
               <p>
-                サジタリオは、イタリア語で射手座を意味します。矢を放つ星座の名に、
-                水を呼んだ一矢の伝承と射水の清らかな水を重ねました。
-              </p>
-              <p>
-                日本のベニスと呼ばれる内川の水辺文化、立山の雪解け水、弓の清水、そして射水の農の記憶。
+                日本のベニスと呼ばれる内川の水辺文化、立山の雪解け水、そして射水の農の記憶。
                 その土地ならではの時間の流れを受け取り、日々の食卓へ訳し直すこと。
                 それが「射水のスローベジタブル」という私たちの答えです。
               </p>
@@ -356,125 +352,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="relative overflow-hidden bg-[linear-gradient(180deg,#eef7f9_0%,#ffffff_46%,#f7fbfc_100%)] px-5 py-24 md:px-8 md:py-32"
-        id="yumino-shozu"
-      >
-        <div className="absolute -left-32 top-24 h-80 w-80 rounded-full border border-sagittarius-water/30" />
-        <div className="absolute -left-20 top-36 h-56 w-56 rounded-full border border-sagittarius-water/20" />
-        <div className="absolute right-[8%] top-24 h-px w-52 rotate-[-28deg] bg-sagittarius-gold/55" />
-
-        <div className="relative mx-auto max-w-7xl">
-          <div className="grid gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
-            <div className="scroll-reveal">
-              <p className="text-xs font-semibold tracking-[0.24em] text-sagittarius-gold">ブランドの源流</p>
-              <h2 className="serif-heading mt-5 text-4xl font-semibold leading-[1.4] text-sagittarius-navy md:text-6xl">
-                一矢が大地を射抜き、
-                <br />
-                清水が湧いた。
-              </h2>
-              <p className="mt-7 max-w-2xl text-base leading-9 text-sagittarius-ink/82 md:text-lg">
-                現在の高岡市中田常国に湧く「弓の清水（ゆみのしょうず）」。
-                古代の射水郡は、現在の射水市域だけでなく、高岡市の大部分までを含む広い地域でした。
-                その歴史圏に伝わる、水と一矢の物語を、水のサジタリオはブランドの源流として受け継ぎます。
-              </p>
-              <div className="mt-9 space-y-5 text-sm leading-8 text-sagittarius-ink/76 md:text-base">
-                <p>
-                  寿永2年（1183年）、平家との戦いに臨む木曽義仲の軍勢は、長い行軍と戦いで喉の渇きを訴えました。
-                  義仲が八幡大菩薩へ祈りを捧げ、大地へ矢を放つと、その場所から清水が湧き出したといいます。
-                </p>
-                <p>
-                  水を得た兵たちは再び力を取り戻し、次の戦いへ進みました。
-                  人を潤し、立ち上がらせ、未来へ送り出す水。その記憶は、今もこんこんと湧き続けています。
-                </p>
-              </div>
-            </div>
-
-            <div className="scroll-reveal relative min-h-[31rem] overflow-hidden rounded-[1.75rem] bg-sagittarius-navy p-8 text-white shadow-[0_30px_90px_rgba(8,42,74,0.18)] md:p-11">
-              <div className="absolute inset-0 ripple-field opacity-25" />
-              <div className="absolute inset-0 star-field opacity-35" />
-              <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full border border-sagittarius-water/25" />
-              <div className="relative z-10 flex h-full flex-col justify-between">
-                <div>
-                  <p className="text-xs font-semibold tracking-[0.22em] text-sagittarius-water">弓の清水</p>
-                  <p className="serif-heading mt-4 text-3xl font-semibold leading-[1.5] md:text-4xl">
-                    弓が水を呼び、
-                    <br />
-                    水が命を前へ進める。
-                  </p>
-                </div>
-
-                <div className="mt-12 grid gap-0 sm:grid-cols-3">
-                  {[
-                    ["一", "祈る", "渇いた人々を想い、天と大地へ祈りを捧げる。"],
-                    ["二", "射る", "願いを込めた一矢を、迷いなく大地へ放つ。"],
-                    ["三", "湧く", "矢の先から清水が湧き、人々へ力を戻す。"],
-                  ].map(([number, title, text], index) => (
-                    <div
-                      className={`py-5 sm:px-5 ${index > 0 ? "border-t border-white/16 sm:border-l sm:border-t-0" : ""}`}
-                      key={title}
-                    >
-                      <span className="grid h-9 w-9 place-items-center rounded-full border border-sagittarius-gold/70 text-sm text-sagittarius-gold">
-                        {number}
-                      </span>
-                      <h3 className="serif-heading mt-4 text-2xl font-semibold text-white">{title}</h3>
-                      <p className="mt-3 text-sm leading-7 text-white/76">{text}</p>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-white/16 pt-6 text-sm text-white/74">
-                  <span>高岡市中田常国</span>
-                  <span>平成の名水百選</span>
-                  <span>湧水量 約80トン／日</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="scroll-reveal mt-14 grid gap-8 border-y border-sagittarius-water/45 py-10 md:grid-cols-[0.7fr_1.3fr] md:items-center">
-            <p className="serif-heading text-3xl font-semibold leading-[1.5] text-sagittarius-navy md:text-4xl">
-              その一矢を、
-              <br />
-              現代の食卓へ。
-            </p>
-            <div>
-              <p className="text-base leading-9 text-sagittarius-ink/82 md:text-lg">
-                水のサジタリオの名と思想は、この土地に残る「弓の清水」の物語へ直接つながっています。
-                祈りを込めた一矢が清水を呼び、その水が人の力を整えたように、
-                私たちは射水の水と土が育てた野菜を、家族の心身と明日を整える一矢として食卓へ届けます。
-              </p>
-              <div className="mt-5 flex flex-wrap gap-5 text-sm font-semibold text-sagittarius-navy">
-                <a
-                  className="border-b border-sagittarius-gold pb-1 transition hover:text-sagittarius-gold"
-                  href="https://water-pub.env.go.jp/water-pub/mizu-site/newmeisui/data/index.asp?info=30"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  環境省「平成の名水百選」
-                </a>
-                <a
-                  className="border-b border-sagittarius-gold pb-1 transition hover:text-sagittarius-gold"
-                  href="https://www.takaoka.or.jp/viewpoint/detail_3196.html"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  高岡観光ナビで物語の舞台を見る
-                </a>
-                <a
-                  className="border-b border-sagittarius-gold pb-1 transition hover:text-sagittarius-gold"
-                  href="https://www.city.imizu.toyama.jp/guide/svGuideDtl.aspx?servno=8"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  射水市「射水」の地名について
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="relative bg-sagittarius-navy px-5 py-24 text-white md:px-8 md:py-32">
         <div className="absolute inset-0 star-field opacity-45" />
         <div className="absolute inset-0 ripple-field opacity-10" />
@@ -484,7 +361,7 @@ export default function Home() {
             eyebrow="神話と伝承"
             light
             title="古の祈りと、射手座の知恵を現代の農へ。"
-            lead="弓の清水に伝わる祈りの一矢、1000年続く流鏑馬神事、古代農耕と天体の関係、そしてケイローンの象徴性。水のサジタリオは、神話と土地の記憶を現代の食卓へ翻訳します。"
+            lead="1000年続く流鏑馬神事の一矢、古代農耕と天体の関係、そしてケイローンの象徴性。水のサジタリオは、神話と土地の記憶を現代の食卓へ翻訳します。"
           />
           <div className="mt-14 grid gap-6 lg:grid-cols-2">
             <article className="scroll-reveal rounded-[1.35rem] border border-white/14 bg-white/8 p-7 backdrop-blur">
